@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Jorys MAHAMBA - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-size: large;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .profile-pic {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: bottom;
+            margin: 0 auto;
+            display: block;
+        }
+        .section-title {
+            border-bottom: 2px solid #2980B9;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+        p, li {
+            margin: 10px 0;
+        }
+        .bold {
+            font-weight: bold;
+        }
+
+        .presentation{
+            display: flex;
+            align-items: flex-start; /* Align items at the start of the container */
+            gap: 20px; /* Add space between the flex items */
+        }
+        
+        .pfp-box {
+            width: 300px;
+            height: 400px;
+            border: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-pic {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+        }
+
+        .contact-info-pfp {
+            list-style-type: none;
+            padding: 08px;
+            margin: 0;
+        }
+
+        .contact-info-pfp a {
+            color: #3498db;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        .contact-info-pfp a:hover {
+            text-decoration: underline;
+        }
+
+        .highlights {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            vertical-align: top;
+            width: 100%; /* Adjust as needed or specify a fixed width */
+            height: 400px;
+            border: 2px solid #ccc;
+            padding-left: 50px;
+            margin-left: 50px;
+        }
+
+        .highlights-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            vertical-align: top;
+            width: 100%; /* Adjust as needed or specify a fixed width */
+            height: 300px;
+            border: none;
+            font-size: 25px;
+        }
+
+        .about {
+            margin-top: 50px;
+            font-size: large;
+        }
+
+        .about p {
+            margin-bottom: 25px;
+        }
+
+        .interest {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-pic {
+                margin: 0 auto 20px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .highlights-text {
+                font-size: 20px; /* Size for medium screens */
+            }
+        }
+
+        @media (max-width: 800px) {
+            .highlights-text {
+                font-size: 16px; /* Size for smaller screens */
+            }
+        }
+
+        @media (max-width: 700px) {
+            .highlights {
+                padding-left: 8px;
+            }
+            .highlights-text {
+                font-size: 8px; /* Size for very small screens */
+            }
+        }
+
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.toggle('active', page.id === pageId);
+            });
+        }
+        window.onload = () => {
+            showPage('about');
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Jorys MAHAMBA</h1>
+    <p>Multipotential, bold and passionate scientific student (karate Black belt & sports champion)</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showPage('about')">About Me</a>
+    <a href="#" onclick="showPage('achievements')">Projects & Publications</a>
+    <a href="#" onclick="showPage('palmares')">Palmarès</a>
+    <a href="#" onclick="showPage('interests')">Interests</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+</nav>
+
+<div class="container">
+    <div id="about" class="page active">
+        <h2>About Me</h2>
+        <div class="presentation">
+            <div class="pfp-box">
+                <div class="image-container">
+                    <img src="images/pfp.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+                <div class="text-container">
+                    <ul class="contact-info-pfp">
+                        <li class="pfp-box-contact"><i class="fas fa-envelope"></i><a href="mailto:jmahamba@gmail.com">jmahamba@hotmail.com</a></li>
+                        <li class="pfp-box-contact"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/jorys-mahamba" target="_blank">linkedin.com/in/jorys-mahamba</a></li>
+                        <li class="pfp-box-contact"><i class="fab fa-github"></i><a href="https://github.com/MahambaDJorys" target="_blank">@MahambaDJorys</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="highlights">
+                <div class="highlights-text">
+                    <p>MSc in Data Sciences & Business Analytics (<a href="https://www.essec.edu/en/program/master-data-sciences-business-analytics/">DSBA</a>) at <a href="https://www.essec.edu/en/">ESSEC</a> & <a href="https://www.centralesupelec.fr/en">CentraleSupélec</a></p>
+                    <p>Handball, Karate & Badminton Youth Champion, Karate Black Belt Coach & Team Leader</p>
+                    <p>Efficient in Python, R, SQL, HTML & CSS for Data Sciences, Business & Web Development</p>
+                    <p>Efficient in LaTeX for Scientific Writing</p>
+                </div>
+                <div class="highlights-pictos">
+                    <p>French: Native; English: Bilingual (IELTS Academic 7.5).</p>
+                    <p>Spanish: Intermediate; Portuguese: Elementary; Mandarin Chinese: Elementary.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <p>Having been one of the youngest French high school graduates, I am curious and passionate about the fields of mathematics, quantum information and data sciences. Thanks to my youth high-level career in several sports, I have developed a strong work ethic, adaptability, leadership, and team-working skills.</p>
+            <p>I am a multipotential, bold, and passionate scientific student who strives to find his road to the stars, for a better world...</p>
+            <p>I am seeking an extraordinary formation to help me develop fundamental knowledge and work on realistic, exciting, and fulfilling projects in order to empower the next generation of leaders, researchers, and innovators. A personalized curriculum to fluidly work across conventional disciplinary boundaries while being mindful of the full set of scientific issues.</p>
+            <p>As the ideal candidate, I am detail-oriented, rigorous about validating results, talented at distilling down complexity, and love tackling and solving hard problems…</p>
+            <p>(Student Ambassador, karate Black belt & sports champion)</p>
+        </div>
+    </div>
+
+    <div id="achievements" class="page">
+        <h2>Projects & Publications</h2>
+        <p>Following the traditional French approach to education, I have focused on building a strong foundation of theoretical knowledge and intuition in my academic journey. In my senior year of undergraduate studies in Mathematics and Physics, I completed my first research paper. Additionally, this personal website represents my first notable project, showcasing my skills and interests.</p>
+        <p>As I continue my academic and professional development, I will update this section with new research publications and projects.</p>
+        <div class="research">
+            <h3>Research papers</h3>
+            <ul>
+                <li>
+                    <em>Mathematical Exploration of Phase Transitions in the Ising Model for its relevance in University-level Statistical Physics Teaching</em> (Undergraduate Research Internship Dissertation): june 2024
+                    <ul>
+                        <li>Supervised by Dr. Paul Dario, I worked on the mathematical foundations of the Ising model through the <em>phase transition</em> phenomena it tries to explain.</li>
+                        <li>The primary aim of this paper is to offer a course sample for ambitious undergraduate mathematics students interested in applying abstract mathematical theories — such as measure theory — to tangible physical problems, exemplified by the Curie phenomena, which is achieved through sophisticated modelizations, specifically the Ising model. The goal was to produce such a course maintaining the rigorous framework based on definitions, theorems, and proofs.</li>
+                        <li>My memoir in <a href="">English</a> & in <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:4314fe13-89da-4708-9c98-109b45fcbbcf" target="_blank">French</a>; my presentation in <a href="">English</a> & in <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:f79363ec-f022-4cb5-a207-2a211882dd01" target="_blank">French</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="projects">
+            <h3>Projects</h3>
+        </div>
+    </div>
+
+    <div id="palmares" class="page">
+        <h2>Palmarès</h2>
+        <h3>Karate - Shotokan | Fighting</h3>
+        <p><span class="bold">FFKDA/FCD/IBA - CSLGMA</span>: 2 to 3 trainings/week (since 2011) - Licences N° : 10702207J/303804</p>
+        <ul>
+            <li>Black Belt Competitor: among national youngest awarded (Shotokan 1st Dan at 16 y.o., 2022)</li>
+            <li>Club's Team Leader & Captain for Regional & National competitions (since 2022)</li>
+            <li>3x winner of the FCD military French Cup (u15 2017, u17 2019, Senior 2022)</li>
+            <li>Captain of the finalist team of the Val-de-Marne Championship by teams (2022)</li>
+            <li>Assistant Coach & Team Leader at CSLGMA: preparation for competitions (since 2021)</li>
+            <li>France TOP 5 level in Karate fighting (FFKDA): u12, u14, u16 & u18 categories (2014-20)</li>
+            <li>Captain of the youth Val-de-Marne Selection Team (2020)</li>
+            <li>Winner of the FFKDA Corporations French Cup (u17, 2019)</li>
+            <li>Selected in the Youth French National Group (2019) - Châtenay CREPS Trainings & Camps</li>
+            <li>Winner of the IBA European Cup (u15, 2017)</li>
+            <li>Winner of the Val-de-Marne Championship in each youth category (since 2017)</li>
+            <li>Titled each year at several national, regional and departmental competitions</li>
+        </ul>
+
+        <h3>Handball | Left & Center Back</h3>
+        <p><span class="bold">FFHB - US Créteil HB</span>: 3 to 5 trainings/week (2013-2024) - Licences N° : 5894003103191/u32014784</p>
+        <ul>
+            <li>US Créteil HB LNH Professional StarLigue prospect (Nationale 1 Team, 2022-25)</li>
+            <li>Elite varsity athlete at UPEC (SHN): National Championship Finalist (forfeit for injury, FFSU, 2023-24)</li>
+            <li>Finalist u18 National Elite Championship (Final4, 2022), Île-de-France Champion (2014-20)</li>
+            <li>Team France-level (u17 National Team prospect unfairly denied due to advanced studies, 2020)</li>
+            <li>Selection Team's Leader: Regional Elite group (u15, 2020) - Eaubonne CDFAS Trainings & Camps</li>
+            <li>Departmental Selection Team's Captain (regional finalist, u13, 2018)</li>
+            <li>Captain of the u15 Elite IDF Region Champion Team (2019 & 2020)</li>
+            <li>Winner of the u15 Tremblay International Tournament (2019), former finalist (2018)</li>
+            <li>Finalist of the u15 Dijon International Tournament (2019)</li>
+            <li>Captain of the Finalist Team in the Regional Selections Championship (2018, 2019)</li>
+            <li>Winner of the first u13 Regional Trophy « Mondial des Clubs u13 » Île-de-France (2017)</li>
+            <li>Finalist of the u12 Eeklo International Tournament (Belgium, 2016)</li>
+            <li>Titled each year at several international tournaments and national/regional/departmental championships</li>
+        </ul>
+
+        <h3>Badminton | Men's Single & Double</h3>
+        <p><span class="bold">FFBad/BadmintonEurope - US Créteil & JAMA</span> (from 2014 to 2019) - Licences N°: 06981155/085590008</p>
+        <ul>
+            <li>UNSS National Umpire & 2nd National Championship Award (BadTen, 2019) & Regional (Badminton, 2016)</li>
+            <li>Ranked #1 of the Val-de-Marne League (CODEP 94) & #3 of the Île-de-France League (LIFB) u13 (2018)</li>
+            <li>Clubs teams co-leader at JAMA (2014-15, 2018-19) & US Créteil (2015-18)</li>
+            <li>Winner of the u13 Departmental Val-de-Marne Championship (2018)</li>
+            <li>Member of the Île-de-France Regional Selection Team (2017) - Châtenay CREPS Trainings & Camps</li>
+            <li>Departmental team's youngest selected player (2016 National vice-champions, 2017)</li>
+            <li>Finalist in Double (1/8 Finalist in Single) at u15 Carlton IYT (Netherlands, 2017)</li>
+            <li>1/4 Finalist at u13 Victor JOT: 5th/48 Europeans, 3rd/12 French (Belgium, 2017)</li>
+            <li>Titled each year by the Federation to several regional and departmental tournaments</li>
+        </ul>
+    </div>
+
+    <div id="interests" class="page">
+        <h2>Interests & Hobbies</h2>
+        <p>Along with sciences and sports, I have a wide range of interests that keep me busy and inspired:</p>
+        <ul>
+            <li class="interest"><strong>Learning:</strong> I always commited to continuous learning and tried to find some time each day to learn about something interesting. Now at ESSEC BS, I have the opportunity to explore a wide range of MOOCs for free, allowing me to delve into both practical and fascinating subjects. I'm always on the lookout for new knowledge that enriches my personal and academic life.</li>
+            <li class="interest"><strong>Philosophy:</strong> My love for philosophy began in twelfth grade, sparked by an inspiring lecture from Dr. Stéphane Floccari, who particularily emphasized the importance of daily reflection. This interest deepened during my first year of CPGE when I encountered Nietzsche, whose ideas resonated profoundly with me and made me realize that I had been engaging in philosophical reflection since childhood. Since then, I've explored various philosophies that align with my worldview, such as Stoic pantheism, and grappled with differing views like Rousseau's interpretation of the ancient Chinese Theory of Good Human Nature. Anime also play a significant role in my philosophical journey, with characters like Monkey D. Luffy from <em>One Piece</em> who carries a strong ideal of Liberty and inspires me daily.</li>
+            <li class="interest"><strong>Classical architecture:</strong> My fascination with classical architecture began with the awe-inspiring columns of Columbia University's library. This early experience sparked a lifelong interest in classical and neoclassical architecture. I admire how these styles have influenced iconic institutions like MIT, Harvard, and Columbia, bringing timeless elegance to modern education.</li>
+            <li class="interest"><strong>The Art of Tea:</strong> My passion for tea has led me to explore its rich traditions, from cultivation and transformation to preparation and tasting. One of my dreams is to open my own tea shop in my old days, where I can share my love for this exquisite beverage with others.</li>
+            <li class="interest"><strong>Urban culture:</strong> Growing up in the Paris suburbs as a mixed-race individual, I was deeply influenced by urban culture. Rap music, impactful films and TV Shows, and sports played a significant role in shaping my worldview. Icons such as 2Pac, Eddie Murphy and LeBron James, along with visual medias like <em>The Fresh Prince of Bel-Air</em> or <em>The Pursuit of Hapyness</em>, have all contributed to my understanding of diverse perspectives and experiences.</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="page">
+        <h2>Contact</h2>
+        <p>If you would like to get in touch, feel free to reach out to me via email or follow me on social media:</p>
+        <ul class="contact-info-pfp">
+            <li class="pfp-box-contact"><i class="fas fa-envelope"></i><a href="mailto:jmahamba@gmail.com">jmahamba@hotmail.com</a></li>
+            <li class="pfp-box-contact"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/jorys-mahamba" target="_blank">linkedin.com/in/jorys-mahamba</a></li>
+            <li class="pfp-box-contact"><i class="fab fa-github"></i><a href="https://github.com/MahambaDJorys" target="_blank">@MahambaDJorys</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Jorys MAHAMBA. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
